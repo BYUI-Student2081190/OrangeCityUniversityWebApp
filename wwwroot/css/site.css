@@ -1,10 +1,66 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat&display=swap');
+
+/*How to call the font families:
+
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+
+*/
+
+/*Font Styles for whole page.*/
+h1, h2, h3, h4, th, th a, a.nav-link, footer {
+    font-family: 'EB Garamond', serif;
+}
+
+p, a, td {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Shared between all pages.*/
+nav, footer {
+    background-color: #f69329;
+    color: #343a40;
+}
+
+li.nav-item a{
+    font-size: 1.2rem;
+}
+
+li.nav-item a:hover
+{
+    background-color: #ffff;
+}
+
+.small-hide{
+    display: none;
+}
+
+.custom-flex-display{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Home Page Styles */
+.jumbotron-custom {
+    padding: 2rem 1rem;
+    background-color: #ffc280b8;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+}
+
+div.home-image{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
@@ -12,16 +68,46 @@ a {
   color: #0366d6;
 }
 
+.btn-spacing{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #dc4211;
+    border-color: #000000;
+}
+
+.btn-primary:hover {
+    color: #000000;
+    background-color: #ffcf8b;
+    border-color: #000000;
+}
+
+.btn-primary:disabled{
+    color: #000000;
+    background-color: #ffcf8b;
+    border-color: #000000;
+}
+
+table.custom-table tbody{
+    display: flex;
+    flex-direction: column;
+}
+
+table.custom-table tbody tr{
+    padding: 1em;
+}
+
+table.custom-table tbody tr td{
+    padding: 0.5em;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
@@ -33,6 +119,10 @@ html {
   html {
     font-size: 16px;
   }
+
+  .small-hide{
+    display: revert;
+    }
 }
 
 .border-top {

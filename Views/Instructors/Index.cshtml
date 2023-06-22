@@ -15,9 +15,9 @@
         <tr>
             <th>Last Name</th>
             <th>First Name</th>
-            <th>Hire Date</th>
+            <th class="small-hide">Hire Date</th>
             <th>Office</th>
-            <th>Courses</th>
+            <th class="small-hide">Courses</th>
             <th></th>
         </tr>
     </thead>
@@ -35,7 +35,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.FirstMidName)
             </td>
-            <td>
+            <td class="small-hide">
                 @Html.DisplayFor(modelItem => item.HireDate)
             </td>
                 <td>
@@ -44,16 +44,16 @@
                         @item.OfficeAssignment.Location
                     }
                 </td>
-                <td>
+                <td class="small-hide">
                     @foreach (var course in item.CourseAssignments)
                     {
                         @course.Course.CourseID @course.Course.Title <br />
                     }
                 </td>
-            <td>
-                <a asp-action="Index" asp-route-id="@item.ID">Select</a> |
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+            <td class="custom-flex-display">
+                <a asp-action="Index" asp-route-id="@item.ID">Select</a> 
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> 
                 <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>

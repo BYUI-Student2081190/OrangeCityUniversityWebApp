@@ -18,13 +18,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.Budget)
             </th>
-            <th>
+            <th class="small-hide">
                 @Html.DisplayNameFor(model => model.StartDate)
             </th>
-            <th>
+            <th class="small-hide">
                 @Html.DisplayNameFor(model => model.RowVersion)
             </th>
-            <th>
+            <th class="small-hide">
                 @Html.DisplayNameFor(model => model.Administrator)
             </th>
             <th></th>
@@ -39,18 +39,18 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Budget)
             </td>
-            <td>
+            <td class="small-hide">
                 @Html.DisplayFor(modelItem => item.StartDate)
             </td>
-            <td>
+            <td class="small-hide">
                 @Html.DisplayFor(modelItem => item.RowVersion)
             </td>
-            <td>
+            <td class="small-hide">
                 @Html.DisplayFor(modelItem => item.Administrator.FullName)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DepartmentID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DepartmentID">Details</a> |
+            <td class="custom-flex-display">
+                <a asp-action="Edit" asp-route-id="@item.DepartmentID">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.DepartmentID">Details</a>
                 <a asp-action="Delete" asp-route-id="@item.DepartmentID">Delete</a>
             </td>
         </tr>

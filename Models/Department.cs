@@ -24,7 +24,7 @@ namespace UniversityWebApp.Models
         [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
 
-
+        [Display(Name = "Row Version")]
         [Timestamp]
         public byte[] RowVersion { get; set; }
 
