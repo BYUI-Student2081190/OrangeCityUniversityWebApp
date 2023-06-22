@@ -48,6 +48,26 @@ namespace UniversityWebApp.Controllers
             return View(course);
         }
 
+        // GET: Update/Course/Credits
+        public IActionResult UpdateCourseCredits()
+        {
+            return View();
+        }
+
+        // POST: Update/Course/Credits
+        [HttpPost]
+        public async Task<IActionResult> UpdateCourseCredits(int? multiplier)
+        {
+            if (multiplier != null)
+            {
+                ViewData["RowsAffected"] =
+                    await _context.Database.ExecuteSqlRawAsync(
+                        "UPDATE Course SET Credits = Credits * {0}",
+                        parameters: multiplier);
+            }
+            return View();
+        }
+
         // GET: Courses/Create
         public IActionResult Create()
         {
