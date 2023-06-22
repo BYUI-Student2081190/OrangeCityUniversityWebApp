@@ -16,7 +16,7 @@ h1, h2, h3, h4, th, th a, a.nav-link, footer {
     font-family: 'EB Garamond', serif;
 }
 
-p, a, td {
+p, a, td, label, input {
     font-family: 'Montserrat', sans-serif;
 }
 
